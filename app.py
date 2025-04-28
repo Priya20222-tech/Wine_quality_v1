@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import numpy as np
 from model import load_data, train_model
 
@@ -32,11 +33,19 @@ def main():
     alcohol = st.sidebar.number_input('Alcohol', min_value=0.0, max_value=20.0, value=10.0)
     type_encode = st.sidebar.selectbox('Type', options=[0, 1], format_func=lambda x: 'Red' if x == 0 else 'White')
 
+    # Column names that match the ones used in training
+    feature_names = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
+                     'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density',
+                     'pH', 'sulphates', 'alcohol', 'type_encode']
+    
+    # Creating the input data as a DataFrame with column names
     if st.sidebar.button('Predict Quality'):
-        input_data = np.array([[fixed_acidity, volatile_acidity, citric_acid, residual_sugar,
-                                chlorides, free_sulfur_dioxide, total_sulfur_dioxide,
-                                density, pH, sulphates, alcohol, type_encode]])
-
+        input_data = pd.DataFrame([[fixed_acidity, volatile_acidity, citric_acid, residual_sugar,
+                                    chlorides, free_sulfur_dioxide, total_sulfur_dioxide,
+                                    density, pH, sulphates, alcohol, type_encode]], 
+                                  columns=feature_names)
+        
+        # Now we pass the input_data as a DataFrame with columns matching the trained model
         input_scaled = scaler.transform(input_data)
         prediction = model.predict(input_scaled)
 
