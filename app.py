@@ -11,6 +11,10 @@ def get_data():
 def get_model(df):
     return train_model(df)
 
+# Main Application Function
+# set_page_config() sets the page title
+# st.title() adds a title to the main app interface
+
 def main():
     st.set_page_config(page_title="Wine Quality Predictor", page_icon=None)
     st.title("Wine Quality Prediction App")
