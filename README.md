@@ -11,7 +11,7 @@ This repository contains a Streamlit web application that predicts whether a win
 
 The application predicts whether a wine sample is of **good quality** or **bad quality** based on user inputs like acidity, sugar content, pH level, alcohol percentage, and wine type (red or white).
 
-## How It Works
+### How It Works
 
 - `model.py` handles:
   - Data loading
