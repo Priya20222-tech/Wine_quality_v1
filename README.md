@@ -52,7 +52,7 @@ The application enables users to input key wine attributes (like acidity, pH, al
 - pandas
 - scikit-learn
 - numpy
-pip install streamlit pandas scikit-learn numpy
+    `pip install streamlit pandas scikit-learn numpy`
 
 
 ## Model Details
