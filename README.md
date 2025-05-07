@@ -2,6 +2,8 @@
 
 This repository contains a Streamlit web application that predicts whether a wine is of **good quality** or **not good quality** based on its physicochemical properties using Logistic Regression.
 
+
+
 ---
 
 ## Objective
@@ -52,7 +54,8 @@ The application enables users to input key wine attributes (like acidity, pH, al
 - pandas
 - scikit-learn
 - numpy
-    `pip install streamlit pandas scikit-learn numpy`
+
+`pip install streamlit pandas scikit-learn numpy`
 
 
 ## Model Details
@@ -63,26 +66,16 @@ Problem Type: Binary Classification
 Target Variable: quality (converted to Good = 1, Not Good = 0)
 
 Features Used:
-
-Fixed Acidity
-
-Volatile Acidity
-
-Citric Acid
-
-Residual Sugar
-
-Chlorides
-
-Free Sulfur Dioxide
-
-Total Sulfur Dioxide
-
-Density
-
-pH
-
-Sulphates
+  - Fixed Acidity
+  - Volatile Acidity
+  - Citric Acid
+  - Residual Sugar
+  - Chlorides
+  - Free Sulfur Dioxide
+  - Total Sulfur Dioxide
+  - Density
+  - pH
+  - Sulphates
 
 Alcohol
 
