@@ -76,8 +76,6 @@ Features Used:
   - Density
   - pH
   - Sulphates
-
-Alcohol
-
-Type (Red = 0, White = 1)
+  - Alcohol
+  - Type (Red = 0, White = 1)
 
