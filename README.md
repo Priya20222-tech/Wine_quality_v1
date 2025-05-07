@@ -2,6 +2,7 @@
 
 This repository contains a Streamlit web application that predicts whether a wine is of **good quality** or **not good quality** based on its physicochemical properties using Logistic Regression.
 
+![Alt text](image/image1.webp) 
 
 
 ---
